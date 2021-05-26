@@ -1,0 +1,149 @@
+.mypokemon {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  margin: 0px auto;
+  display: block;
+  padding: 10px 16px 60px 16px;
+
+  h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &-list {
+    &-item {
+      position: relative;
+      width: 22%;
+      font-size: 14px;
+      padding: 0px;
+      border: 1px solid #dedede;
+      border-radius: 4px;
+      margin: 0px 4% 25px 0px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      text-transform: capitalize;
+      text-decoration: none;
+      color: #000;
+      opacity: 0.95;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        text-decoration: none;
+      }
+      -moz-user-select: none;
+      -website-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -o-user-select: none;
+
+      &:nth-child(4n) {
+        margin-right: 0px;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      p {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 12px;
+        background-color: #a7daff;
+        padding: 4px 5px;
+        border-radius: 3px;
+      }
+
+      img {
+        width: 70%;
+        height: auto;
+        margin: 0px auto;
+      }
+
+      &-title {
+        width: 100%;
+        display: block;
+        background-color: #e8e8e8;
+        padding: 10px 0px;
+      }
+
+      &-delete {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ef5350;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-delete {
+    position: fixed;
+    bottom: 0px;
+    width: 1020px;
+    padding: 10px 0px;
+    background-color: #ef5350;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mypokemon {
+    width: 100%;
+    max-width: 100%;
+
+    &-list {
+      &-item {
+        width: 48%;
+        margin: 0px 4% 15px 0px;
+
+        &:nth-child(4n) {
+          margin-right: 4%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &-delete {
+      width: 100%;
+      left: 0px;
+      right: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .mypokemon {
+    &-list{
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+}

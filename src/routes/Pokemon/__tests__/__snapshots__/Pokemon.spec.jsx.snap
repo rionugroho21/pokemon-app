@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pokemon Page should render page correctly 1`] = `
+<DocumentFragment>
+  <p
+    class="loading"
+  >
+    Loading...
+  </p>
+</DocumentFragment>
+`;

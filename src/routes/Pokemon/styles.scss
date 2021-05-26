@@ -1,0 +1,137 @@
+.pokemon {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  margin: 0px auto;
+  display: block;
+  padding: 10px 16px 30px 16px;
+
+  &-nav {
+    overflow: auto;
+    margin-bottom: 20px;
+
+    &-total {
+      font-size: 14px;
+      margin-top: 6px;
+      float: left;
+    }
+
+    &-pagination {
+      text-align: center;
+      float: right;
+
+      button {
+        padding: 5px 18px;
+        border: none;
+        background-color: #a9a9a9;
+        border-radius: 3px;
+        cursor: pointer;
+        color: #000;
+        font-weight: 400;
+        font-size: 14px;
+
+        &:last-child {
+          margin-left: 10px;
+        }
+
+        &:hover {
+          background-color: #cccccc;
+        }
+      }
+    }
+  }
+
+  &-list{
+    &-item {
+      position: relative;
+      width: 22%;
+      font-size: 14px;
+      padding: 0px;
+      border: 1px solid #dedede;
+      border-radius: 4px;
+      margin: 0px 4% 25px 0px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      text-transform: capitalize;
+      text-decoration: none;
+      color: #000;
+      opacity: 0.95;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        text-decoration: none;
+      }
+      -moz-user-select: none;
+      -website-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -o-user-select: none;
+
+      &:nth-child(4n) {
+        margin-right: 0px;
+      }
+
+      p {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 12px;
+        background-color: #a7daff;
+        padding: 4px 5px;
+        border-radius: 3px;
+      }
+
+      &-image {
+        height: auto;
+        min-height: 30px;
+      }
+
+      img {
+        width: 70%;
+        height: auto;
+        margin: 0px auto;
+      }
+
+      &-title {
+        width: 100%;
+        display: block;
+        background-color: #e8e8e8;
+        padding: 10px 0px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .pokemon {
+    width: 100%;
+    max-width: 100%;
+
+    &-list{
+      &-item {
+        width: 48%;
+        margin: 0px 4% 15px 0px;
+
+        &:nth-child(4n) {
+          margin-right: 4%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pokemon {
+    &-list{
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+}
