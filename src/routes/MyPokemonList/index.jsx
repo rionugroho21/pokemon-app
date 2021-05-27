@@ -29,9 +29,11 @@ export const MyPokemonList = props => {
             <div key={key} className="mypokemon-list-item">
               <Link to={`/pokemon/${list.name}`}>
                 <p>{list.myname}</p>
-                <img src={pokemonImg} alt="Pokemon" />
+                <div className="mypokemon-list-item-image">
+                  <img src={pokemonImg} alt="Pokemon" width="130" height="130" />
+                </div>
                 <div className="mypokemon-list-item-title">
-                  {list.data.name} ({list.myname})
+                  {list.data.name}
                 </div>
               </Link>
               <button className="mypokemon-list-item-delete" onClick={() => handleDelete(list.id)}>x</button>

@@ -45,7 +45,7 @@ export const Pokemon = props => {
                 <Link to={`/pokemon/${list.name}`} className="pokemon-list-item" key={key}>
                   <p>Owned : {owned}</p>
                   <div className="pokemon-list-item-image">
-                    <img src={pokeball} alt="Pokeball" width="110" />
+                    <img src={pokeball} alt="Pokeball" width="110" height="110" />
                   </div>
                   <div className="pokemon-list-item-title">
                     {list.name}
