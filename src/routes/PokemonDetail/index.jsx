@@ -43,25 +43,25 @@ export const PokemonDetail = props => {
           <div className="pokemon-image">
             <div className="pokemon-image-item">
               <div className="pokemon-image-item-img">
-                <img src={get(pokemonDetail, 'sprites.front_default', '')} />
+                <img src={get(pokemonDetail, 'sprites.front_default', '')} alt="Pokemon Normal Front" />
               </div>
               <span>Normal Front</span>
             </div>
             <div className="pokemon-image-item">
               <div className="pokemon-image-item-img">
-                <img src={get(pokemonDetail, 'sprites.back_default', '')} />
+                <img src={get(pokemonDetail, 'sprites.back_default', '')} alt="Pokemon Normal Back" />
               </div>
               <span>Normal Back</span>
             </div>
             <div className="pokemon-image-item">
               <div className="pokemon-image-item-img">
-                <img src={get(pokemonDetail, 'sprites.front_shiny', '')} />
+                <img src={get(pokemonDetail, 'sprites.front_shiny', '')} alt="Pokemon Shiny Front" />
               </div>
               <span>Shiny Front</span>
             </div>
             <div className="pokemon-image-item">
               <div className="pokemon-image-item-img">
-                <img src={get(pokemonDetail, 'sprites.back_shiny', '')} />
+                <img src={get(pokemonDetail, 'sprites.back_shiny', '')} alt="Pokemon Shiny Back" />
               </div>
               <span>Shiny Back</span>
             </div>

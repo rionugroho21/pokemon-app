@@ -9,7 +9,7 @@ class Aside extends Component{
     return (
       <div className="menu">
         <div className="menu-wrap">
-          <h1 className="menu-logo"><Link to="/"><img src={pokemonLogo} /></Link></h1>
+          <h1 className="menu-logo"><Link to="/"><img src={pokemonLogo} alt="Pokemon app logo" width="85" /></Link></h1>
           <nav className="menu-link">
             <ul>
               <li><Link to="/">Home</Link></li>

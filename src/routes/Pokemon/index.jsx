@@ -5,6 +5,8 @@ import get from 'lodash/get';
 
 import usePokemon from './hooks/usePokemon';
 
+import pokeball from '../../assets/images/pokeball.png';
+
 import './styles.scss';
 
 export const Pokemon = props => {
@@ -34,16 +36,16 @@ export const Pokemon = props => {
 
           <div className="pokemon-list">
             {listPokemon.map((list, key) => {
-              const url = get(list, 'url', '');
-              const pokemonIndex = url.split('/')[url.split('/').length - 2];
-              const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
+              // const url = get(list, 'url', '');
+              // const pokemonIndex = url.split('/')[url.split('/').length - 2];
+              // const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
               const owned = handleCheckOwned(list.name);
 
               return (
                 <Link to={`/pokemon/${list.name}`} className="pokemon-list-item" key={key}>
                   <p>Owned : {owned}</p>
                   <div className="pokemon-list-item-image">
-                    <img src={imageUrl} />
+                    <img src={pokeball} alt="Pokeball" width="110" />
                   </div>
                   <div className="pokemon-list-item-title">
                     {list.name}

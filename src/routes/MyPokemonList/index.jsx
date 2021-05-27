@@ -6,6 +6,8 @@ import isEmpty from 'lodash/isEmpty';
 
 import useMyPokemon from './hooks/useMyPokemon';
 
+import pokeball from '../../assets/images/pokeball.png';
+
 import './styles.scss';
 
 export const MyPokemonList = props => {
@@ -21,13 +23,13 @@ export const MyPokemonList = props => {
 
       <div className="mypokemon-list">
         {myPokemon.map((list, key) => {
-          const pokemonImg = get(list, 'data.sprites.front_default', '')
+          const pokemonImg = get(list, 'data.sprites.front_default', pokeball);
 
           return (
             <div key={key} className="mypokemon-list-item">
               <Link to={`/pokemon/${list.name}`}>
                 <p>{list.myname}</p>
-                <img src={pokemonImg} />
+                <img src={pokemonImg} alt="Pokemon" />
                 <div className="mypokemon-list-item-title">
                   {list.data.name} ({list.myname})
                 </div>
